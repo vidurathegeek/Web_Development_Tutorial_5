@@ -1,0 +1,30 @@
+<html>
+	<head>
+		<script type="text/javascript">
+
+			var rows = parseInt(window.prompt("Enter Number of Rows",0));
+			var coloms = parseInt(window.prompt("Enter Number of Coloms",0));
+
+			var multab = [rows][coloms];
+
+			var r = rows;
+
+			for( var i=0; i<rows; i++ ) {
+  				multab.push([]);
+			}
+			console.log(multab.length)
+			/*
+			for(var i=0; i<rows; i++){
+				for(var t=multab[i].length; t<coloms; t++){
+					var val = i*t;
+					console.log(val);
+					multab[i].push(val);
+				}	
+			}
+			*/
+		</script>
+	</head>
+	<body>
+		
+	</body>
+</html>

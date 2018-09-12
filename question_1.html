@@ -1,0 +1,19 @@
+<html>
+	<head></head>
+	<body>
+		<div id="test"></div>
+		<div id="demo"></div>
+		<script type="text/javascript">
+			var date = new Date();
+			var time = date.getTime();
+			document.getElementById("demo").innerHTML = date.toDateString();
+			
+			var hours = date.getHours();
+			var mins = date.getMinutes();
+			var secs = date.getSeconds();
+			document.getElementById('test').innerHTML = hours + ":" + mins + ":" + secs;
+			//console.log(hours + ":" + mins + ":" + secs);
+		</script>		
+	</body>
+</html>
+<!-- vidurathegeek -->
