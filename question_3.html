@@ -2,29 +2,28 @@
 	<head>
 		<script type="text/javascript">
 
-			var rows = parseInt(window.prompt("Enter Number of Rows",0));
-			var coloms = parseInt(window.prompt("Enter Number of Coloms",0));
+			var row = prompt("Enter Number", "0") 
+			var col = window.prompt("Enter Number of Coloms","0");
+			 
+			var row = parseInt(row); 
+			var col = parseInt(col);
+			var i = 0;
+			var j = 0;
+			 
+			document.write('<table border="1">');
 
-			var multab = [rows][coloms];
-
-			var r = rows;
-
-			for( var i=0; i<rows; i++ ) {
-  				multab.push([]);
-			}
-			console.log(multab.length)
-			/*
-			for(var i=0; i<rows; i++){
-				for(var t=multab[i].length; t<coloms; t++){
-					var val = i*t;
-					console.log(val);
-					multab[i].push(val);
+			for(i=1;i<row+1;i++) {
+				document.write("<tr>");
+				for(j=1;j<col+1;j++){
+					document.write("<td>" + i*j + "</td>");
 				}	
-			}
-			*/
+				document.write("</tr>");		    
+			}			 
+			document.write("</table>");
+
 		</script>
 	</head>
 	<body>
-		
 	</body>
 </html>
+<!-- vidurathegeek -->
