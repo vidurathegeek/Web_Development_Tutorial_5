@@ -1,2 +1,74 @@
 <html>
+	<head>
+		<script type="text/javascript">
+			function validate(){
+				if(document.newFom.fname.value == ""){
+					alert("First Name is Mandatory");
+					document.newFom.fname.style.backgroundColor = "red";
+					document.newFom.fname.focus();
+					return false;
+				}
+				if(document.newFom.lname.value == ""){
+					alert("Last Name is Mandatory");
+					document.newFom.lname.style.backgroundColor = "red";
+					document.newFom.lname.focus();
+					return false;
+				}
+				if(document.newFom.email.value == ""){
+					alert("Email is Mandatory");
+					document.newFom.email.style.backgroundColor = "red";
+					document.newFom.email.focus();
+					return false;
+				}
+				if(document.newFom.userId.value == ""){
+					alert("User ID is Mandatory");
+					document.newFom.userId.style.backgroundColor = "red";
+					document.newFom.userId.focus();
+					return false;
+				}
+				if(document.newFom.password.value == ""){
+					alert("Password is Mandatory");
+					document.newFom.password.style.backgroundColor = "red";
+					document.newFom.password.focus();
+					return false;
+				}
+				if(document.newFom.conpassword.value == ""){
+					alert("Password Confirm is Mandatory");
+					document.newFom.conpassword.style.backgroundColor = "red";
+					document.newFom.conpassword.focus();
+					return false;
+				}
+
+				var mail = document.newFom.email.value;
+				atpos = mail.indexOf("@");
+				dotpos = mail.lastIndexOf(".");
+				if(atpos < 1 || (dotpos - atpos <2)){
+					alert("Enter a valid Email");
+					document.newFom.email.focus();
+					return false;
+				}
+
+				if(document.newFom.password.value != document.newFom.conpassword.value){
+					alert("Enter mathcing passwords");
+					document.newFom.passwords.focus();
+					//document.newFom.conpassword.focus();
+					return false;
+				}
+
+				alert("Form Submitted Sucessfully");
+				return true;
+			}
+		</script>
+	</head>
+	<body>
+		<form name="newFom" onsubmit="return(validate());">
+			<input type="text" name="fname" id="fname" placeholder="First Name"><br>
+			<input type="text" name="lname" id="lname" placeholder="Last Name"><br>
+			<input type="text" name="email" id="email" placeholder="Email"><br>
+			<input type="number" name="userId" id="userId" placeholder="User ID"><br>
+			<input type="password" name="password" id="password" placeholder="Password"><br>
+			<input type="password" name="conpassword" id="conpassword" placeholder="Confirm Password"><br>
+			<input type="submit" name="submit" id="submit">
+		</form>
+	</body>
 </html>
